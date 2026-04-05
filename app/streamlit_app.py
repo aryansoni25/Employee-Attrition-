@@ -17,7 +17,7 @@ st.markdown("### Enter Employee Details")
 # ---------------------------
 # LOAD MODELS
 # ---------------------------
-MODEL_DIR = os.path.join(BASE_DIR, "..", "models")
+MODEL_DIR = os.path.join(BASE_DIR, "models")
 
 nb_model = joblib.load(os.path.join(MODEL_DIR, "nb_model.pkl"))
 scaler = joblib.load(os.path.join(MODEL_DIR, "scaler.pkl"))
