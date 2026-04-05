@@ -3,6 +3,11 @@ import joblib
 import torch
 import numpy as np
 import os
+import sys
+
+# 🔥 FIX PATH
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
 
 from src.model import AttritionNN
 
@@ -12,7 +17,6 @@ st.markdown("### Enter Employee Details")
 # ---------------------------
 # LOAD MODELS
 # ---------------------------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "..", "models")
 
 nb_model = joblib.load(os.path.join(MODEL_DIR, "nb_model.pkl"))
